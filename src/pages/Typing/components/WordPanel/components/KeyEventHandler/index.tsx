@@ -9,6 +9,7 @@ export default function KeyEventHandler({ updateInput }: { updateInput: (updateO
 
   const onKeydown = useCallback(
     (e: KeyboardEvent) => {
+      e.preventDefault()
       const char = e.key
 
       if (isChineseSymbol(char)) {
